@@ -36,10 +36,16 @@ const logger = require('@/middlewares/utils/logger');
 const dbConnect = require('./src/utils/dbConnect');
 
 const app = express();
+
 const cors = require('cors');
 
+var corsOptions = {
+    origin: 'https://barho-pakistan-frontend.vercel.app/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 
-app.use(cors()); // We can configure the other options later
+
+app.use(cors(corsOptions)); // We can configure the other options later
 
 app.use(express.json());
 
