@@ -54,6 +54,10 @@ dbConnect();
 
 app.use(logger);
 
+app.get('/', (req, res) => {
+    res.send('Hello World')
+  }) // Test route
+  
 // Use login routes
 app.use('/api', loginRoute);
 
