@@ -45,7 +45,8 @@ var corsOptions = {
   }
 
 
-app.use(cors(corsOptions)); // We can configure the other options later
+// app.use(cors(corsOptions)); // We can configure the other options later
+app.use(cors())
 
 app.use(express.json());
 
@@ -57,7 +58,7 @@ app.use(logger);
 app.get('/', (req, res) => {
     res.send('Hello World')
   }) // Test route
-  
+
 // Use login routes
 app.use('/api', loginRoute);
 
