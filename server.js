@@ -52,6 +52,7 @@ const allowedOrigin = "https://barho-pakistan-frontend.vercel.app"
 
 app.use(cors({
     origin: function (origin, callback) {
+      console.log('origin',origin)
       // If the request comes from the allowed origin, allow it
       if (origin === allowedOrigin) {
         callback(null, true);
