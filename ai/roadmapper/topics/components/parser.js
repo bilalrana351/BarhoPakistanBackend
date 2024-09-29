@@ -1,4 +1,4 @@
-const getParser = require('../../../../utils/getAIModel');
+const getParser = require('../../../../utils/getAIParser');
 
 const parser = getParser('openai','toolparser')
 

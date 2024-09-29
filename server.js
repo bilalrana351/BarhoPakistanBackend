@@ -50,19 +50,19 @@ const cors = require('cors');
 
 const allowedOrigin = "https://barho-pakistan-frontend.vercel.app"
 
-app.use(cors({
-    origin: function (origin, callback) {
-      // If the request comes from the allowed origin, allow it
-      if (origin === allowedOrigin) {
-        callback(null, true);
-      } else {
-        // If the request comes from an unapproved origin, block it
-        callback(new Error('Not allowed by CORS'));
-      }
-    }
-  }));
+// app.use(cors({
+//     origin: function (origin, callback) {
+//       // If the request comes from the allowed origin, allow it
+//       if (origin === allowedOrigin) {
+//         callback(null, true);
+//       } else {
+//         // If the request comes from an unapproved origin, block it
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     }
+//   }));
 
-app.use(cors());
+app.use(cors())
 
 app.use(express.json());
 
@@ -107,6 +107,7 @@ app.use('/api',retrieveModulesRoute)
 // Error handler for the server
 app.use((err, req, res, next) => {
     console.error(err.stack);
+    console.log(err.stack)
     res.status(500).json({ message: 'Internal Server Error' });
 });
 
