@@ -16,16 +16,19 @@
   "dependencies": {
     "@langchain/core": "^0.2.27",
     "@langchain/openai": "^0.2.7",
+    "@netlify/functions": "^2.8.1",
+    "@types/express": "^5.0.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.0",
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
     "langchain": "^0.2.17",
     "module-alias": "^2.2.3",
     "mongoose": "^8.5.3",
     "openai": "^4.56.0",
+    "serverless-http": "^3.2.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
