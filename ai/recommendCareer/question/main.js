@@ -10,6 +10,6 @@ if (tool != null) {
     finalModel = model.bindTools([tool],{tool_choice:'required'})
 }
 
-const chain = getChain([prompt,finalModel])
+const chain = makeChain([prompt,finalModel])
 
 module.exports = chain;

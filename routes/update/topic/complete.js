@@ -1,11 +1,11 @@
 // Import dependencies
 const express = require('express');
 
-const getComplete = require('../../controllers/update/topic/completeController'); // Adjust the path as needed
+const getComplete = require('../../../controllers/update/topic/completeController'); // Adjust the path as needed
 
-const validateComplete = require('../../middlewares/update/topic/completeValidator'); // Adjust the path as needed
+const validateComplete = require('../../../middlewares/update/topic/completeValidator'); // Adjust the path as needed
 
-const tokenValidator = require('../../middlewares/auth/tokenValidator');
+const tokenValidator = require('../../../middlewares/auth/tokenValidator');
 
 const router = express.Router();
 

@@ -1,5 +1,4 @@
 // app.js (or server.js)
-require('module-alias/register'); // This will help in using the @ alias
 require('dotenv').config({
     path: '.env'
 });

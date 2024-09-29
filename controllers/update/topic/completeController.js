@@ -1,6 +1,6 @@
 // controllers/authController.js
-const User = require('../../../models');
-const errorHandler = require('@/middlewares/err/errorHandler');
+const User = require('../../../models/User');
+const errorHandler = require('../../../middlewares/err/errorHandler');
 
 const getModule = (user, module) => {
     const foundModule = user.enrolledCourses.find(userModule => userModule.name === module);
