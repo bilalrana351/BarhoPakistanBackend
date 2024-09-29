@@ -39,10 +39,10 @@ const app = express();
 
 const cors = require('cors');
 
-var corsOptions = {
-    origin: 'https://barho-pakistan-frontend.vercel.app/',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+// var corsOptions = {
+//     origin: 'https://barho-pakistan-frontend.vercel.app/',
+//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+//   }
 
 
 // app.use(cors(corsOptions)); // We can configure the other options later
