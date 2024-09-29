@@ -38,30 +38,15 @@ const app = express();
 
 const cors = require('cors');
 
-// var corsOptions = {
-//     origin: 'https://barho-pakistan-frontend.vercel.app/',
-//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-//   }
+var corsOptions = {
+    origin: 'https://barho-pakistan-frontend.vercel.app/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 
 
-// app.use(cors(corsOptions)); // We can configure the other options later
+app.use(cors(corsOptions)); // We can configure the other options later
 
 // Set up CORS to allow only requests from the specific origin
-
-const allowedOrigin = "https://barho-pakistan-frontend.vercel.app"
-
-app.use(cors({
-    origin: function (origin, callback) {
-      console.log('origin',origin)
-      // If the request comes from the allowed origin, allow it
-      if (origin === allowedOrigin) {
-        callback(null, true);
-      } else {
-        // If the request comes from an unapproved origin, block it
-        callback(new Error('Not allowed by CORS'));
-      }
-    }
-  }));
 
 // app.use(cors())
 
