@@ -4,36 +4,36 @@ require('dotenv').config({
     path: '.env'
 });
 const express = require('express');
-const loginRoute = require('./src/routes/auth/login');
-const signupRoute = require('./src/routes/auth/signup');
-const recommenderRoute = require('./src/routes/ai/recommendCareer/recommend');
-const questionRoute = require('./src/routes/ai/recommendCareer/question');
-const qualityRoute = require('./src/routes/ai/recommendCareer/qualities');
+const loginRoute = require('./routes/auth/login');
+const signupRoute = require('./routes/auth/signup');
+const recommenderRoute = require('./routes/ai/recommendCareer/recommend');
+const questionRoute = require('./routes/ai/recommendCareer/question');
+const qualityRoute = require('./routes/ai/recommendCareer/qualities');
 
-const topicScorerScoreRoute = require('./src/routes/ai/topicScorer/score');
-const topicScorerQuestionRoute = require('./src/routes/ai/topicScorer/question');
-const topicExplainerQuestionRoute = require('./src/routes/ai/topicExplainer/question');
-const roadmapperSubmodulesRoute = require('./src/routes/ai/roadmapper/submodules');
-const roadmappertopicsRoute = require('./src/routes/ai/roadmapper/topics');
+const topicScorerScoreRoute = require('./routes/ai/topicScorer/score');
+const topicScorerQuestionRoute = require('./routes/ai/topicScorer/question');
+const topicExplainerQuestionRoute = require('./routes/ai/topicExplainer/question');
+const roadmapperSubmodulesRoute = require('./routes/ai/roadmapper/submodules');
+const roadmappertopicsRoute = require('./routes/ai/roadmapper/topics');
 
-const completeTopicUpdateRoute = require('./src/routes/update/topic/complete')
+const completeTopicUpdateRoute = require('./routes/update/topic/complete')
 
-const saveMessagesRoute = require('./src/routes/save/messages');
-const saveScoreRoute = require('./src/routes/save/score');
-const saveModuleRoute = require('./src/routes/save/module');
-const saveSubmoduleRoute = require('./src/routes/save/submodule');
-const saveTopicRoute = require('./src/routes/save/topic');
+const saveMessagesRoute = require('./routes/save/messages');
+const saveScoreRoute = require('./routes/save/score');
+const saveModuleRoute = require('./routes/save/module');
+const saveSubmoduleRoute = require('./routes/save/submodule');
+const saveTopicRoute = require('./routes/save/topic');
 
-const getMessagesRoute = require('./src/routes/retrieve/messages');
-const getModulesRoute = require('./src/routes/retrieve/module');
-const getSubmodulesRoute = require('./src/routes/retrieve/submodule');
-const getTopicsRoute = require('./src/routes/retrieve/topic');
+const getMessagesRoute = require('./routes/retrieve/messages');
+const getModulesRoute = require('./routes/retrieve/module');
+const getSubmodulesRoute = require('./routes/retrieve/submodule');
+const getTopicsRoute = require('./routes/retrieve/topic');
 
-const retrieveModulesRoute = require('./src/routes/retrieve/modules')
+const retrieveModulesRoute = require('./routes/retrieve/modules')
 
-const logger = require('@/middlewares/utils/logger');
+const logger = require('./middlewares/utils/logger');
 
-const dbConnect = require('./src/utils/dbConnect');
+const dbConnect = require('./utils/dbConnect');
 
 const app = express();
 
